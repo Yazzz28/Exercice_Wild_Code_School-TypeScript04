@@ -8,11 +8,11 @@ class Person {
     }
 
     public tellMyName(): string {
-        return `I am ${this.name}`;  // Utilisez des backticks
+        return `I am ${this.name}`;
     }
 
     public tellMyAge(): string {
-        return `I am ${this.age} years old`;  // Utilisez des backticks
+        return `I am ${this.age} years old`;
     }
 }
 
