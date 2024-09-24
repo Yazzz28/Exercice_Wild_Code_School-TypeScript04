@@ -1,30 +1,33 @@
-class Person
-{
-    private name: string;
-    private age: number;
-
-    constructor(name: string, age: number)
-    {
-        this.name = name;
-        this.age = age;
-    }
-
-    public tellMyName(): string
-    {
-        return 'I am ${this.name}';
-    }
-
-    public tellMyAge(): string
-    {
-        return 'I am ${this.age} years old';
-    }
+interface User {
+	name: string;
+	age: number;
 }
 
+class Person {
+	private name: string;
+	private age: number;
 
-let person = new Person('John', 40);
-console.log(person.tellMyName());
-console.log(person.tellMyAge());
+	constructor(name: string, age: number) {
+		this.name = name;
+		this.age = age;
+	}
 
-let person2 = new Person('Mary', 35);
-console.log(person2.tellMyName());
-console.log(person2.tellMyAge());
+	public tellMyName(): void {
+		console.log(`I am ${this.name}`);
+	}
+
+	public tellMyAge(): void {
+		console.log(`I am ${this.age} years old`);
+	}
+
+	public tellMyNameAndAge(): void {
+		this.tellMyName();
+		this.tellMyAge();
+	}
+}
+
+const firstPerson = new Person("John", 40);
+const secondPerson = new Person("Mary", 35);
+
+firstPerson.tellMyNameAndAge();
+secondPerson.tellMyNameAndAge();
