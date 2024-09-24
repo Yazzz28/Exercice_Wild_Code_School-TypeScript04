@@ -4,18 +4,16 @@ var Person = /** @class */ (function () {
         this.age = age;
     }
     Person.prototype.tellMyName = function () {
-        console.log("I am ".concat(this.name));
+        return "I am ".concat(this.name); // Utilisez des backticks
     };
     Person.prototype.tellMyAge = function () {
-        console.log("I am ".concat(this.age, " years old"));
-    };
-    Person.prototype.tellMyNameAndAge = function () {
-        this.tellMyName();
-        this.tellMyAge();
+        return "I am ".concat(this.age, " years old"); // Utilisez des backticks
     };
     return Person;
 }());
-var firstPerson = new Person("John", 40);
-var secondPerson = new Person("Mary", 35);
-firstPerson.tellMyNameAndAge();
-secondPerson.tellMyNameAndAge();
+var person = new Person('John', 40);
+console.log(person.tellMyName());
+console.log(person.tellMyAge());
+var person2 = new Person('Mary', 35);
+console.log(person2.tellMyName());
+console.log(person2.tellMyAge());
